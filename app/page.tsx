@@ -20,6 +20,7 @@ import Enchanted from "./home/components/enchanted";
 import LegendaryTrack from "./home/components/legendaryTrack";
 
 export default function Home() {
+  console.log(25);
   return (
     <div className={styles.page}>
       <Training />
