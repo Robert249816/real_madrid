@@ -1,0 +1,161 @@
+.emiratesAdidas {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  @media screen and (max-width: 460px) {
+    flex-direction: column;
+    align-items: center;
+  }
+  img {
+    @media screen and (max-width: 460px) {
+      width: 100px;
+      height: 83px;
+    }
+  }
+}
+.hp {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  img {
+    @media screen and (max-width: 860px) {
+      width: 92px;
+      height: 76px;
+    }
+  }
+}
+.item:nth-child(5) {
+  @media screen and (max-width: 860px) {
+    display: none;
+  }
+}
+.item:nth-child(6) {
+  @media screen and (max-width: 860px) {
+    display: none;
+  }
+}
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+  @media screen and (max-width: 860px) {
+    gap: 10px;
+  }
+  @media screen and (max-width: 420px) {
+    gap: 5px;
+  }
+
+  .itemNone {
+    @media screen and (max-width: 860px) {
+      display: none;
+    }
+  }
+  img {
+    width: 83px;
+    height: 68px;
+    @media screen and (max-width: 860px) {
+      width: 57px;
+      height: 43px;
+    }
+  }
+}
+.social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  @media screen and (max-width: 1060px) {
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+  @media screen and (max-width: 420px) {
+    padding: 0 10px;
+  }
+  .seeAllNone {
+    display: none;
+    color: #5e6a83;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 12px;
+    &:hover {
+      text-decoration: underline;
+      color: #3e31fa;
+    }
+    @media screen and (max-width: 1060px) {
+      display: flex;
+    }
+  }
+  .app {
+    display: flex;
+    gap: 40px;
+    font-size: 24px;
+    @media screen and (max-width: 1060px) {
+      border-bottom: 1px solid #8c95ae82;
+      padding: 20px;
+    }
+    @media screen and (max-width: 480px) {
+      gap: 20px;
+    }
+  }
+}
+.realMadridReserved {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  padding: 20px;
+  border-top: 1px solid #8c95ae5d;
+  @media screen and (max-width: 1060px) {
+    border: none;
+    align-items: center;
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 10px;
+  }
+  .realMadridReserved_right {
+    font-size: 10px;
+    p {
+      color: #8c95ae;
+      font-weight: 600;
+    }
+  }
+  .realMadridReserved_left {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+    p {
+      color: #5e6a83;
+      font-weight: 600;
+      cursor: pointer;
+      &:hover {
+        text-decoration: underline;
+        color: #3e31fa;
+      }
+    }
+
+    a {
+      color: #5e6a83;
+      font-weight: 600;
+      cursor: pointer;
+      &:hover {
+        text-decoration: underline;
+        color: #3e31fa;
+      }
+      @media screen and (max-width: 1060px) {
+        display: none;
+      }
+    }
+    .circle {
+      @media screen and (max-width: 1060px) {
+        display: none;
+      }
+    }
+    div {
+      color: #5e6a83;
+      font-size: 4px;
+    }
+  }
+}

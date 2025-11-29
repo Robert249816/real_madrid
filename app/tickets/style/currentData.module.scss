@@ -1,0 +1,510 @@
+.eventsWrapper {
+  width: 100%;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.filterHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(16px, 3vw, 40px);
+  padding: 40px clamp(20px, 5vw, 80px) 0;
+  flex-wrap: wrap;
+}
+
+.filterButton {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #3e31fa;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px 12px;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: rgba(62, 49, 250, 0.05);
+  }
+
+  &:focus {
+    outline: 2px solid #3e31fa;
+    outline-offset: 2px;
+  }
+}
+
+.monthsContainer {
+  flex: 1;
+  min-width: 280px;
+  width: 100%;
+  display: flex;
+  background-color: #8c95ae24;
+  border-radius: 20px;
+  padding: 4px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.monthItem {
+  min-width: 50px;
+  flex: 1;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 4px;
+  cursor: pointer;
+  color: #5e6a83;
+  background-color: transparent;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  font-size: clamp(12px, 1.5vw, 16px);
+  font-weight: 400;
+
+  &:hover {
+    background-color: #645ae20e;
+  }
+
+  &.active {
+    color: #3e31fa;
+    background-color: #645ae20e;
+    font-weight: 600;
+  }
+}
+
+.currentDateWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.currentDateButton {
+  padding: 8px 24px;
+  background-color: #5e6a8320;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  color: #5e6a83;
+  font-size: 14px;
+
+  &:hover {
+    background-color: #5e6a832d;
+  }
+
+  &.active {
+    background-color: #5e6a83;
+    color: white;
+
+    &:hover {
+      background-color: #4a5570;
+    }
+  }
+}
+
+.nextEventsContainer {
+  width: 100%;
+  padding: 10px 0;
+}
+
+.nextEventsTopBox {
+  padding: 0 clamp(20px, 5vw, 100px);
+
+  h2 {
+    font-size: clamp(28px, 5vw, 40px);
+    color: #0f2145;
+    margin-bottom: 0;
+  }
+}
+
+.teamsSubscribe {
+  display: flex;
+  gap: 20px;
+  margin-top: 15px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.actionButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #3e31fa;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 8px 12px;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: rgba(62, 49, 250, 0.05);
+    text-decoration: underline;
+  }
+
+  &:focus {
+    outline: 2px solid #3e31fa;
+    outline-offset: 2px;
+  }
+
+  svg {
+    font-size: 18px;
+  }
+}
+
+.carouselWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.carouselButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background-color: white;
+  border: none;
+  width: clamp(44px, 7vw, 56px);
+  height: clamp(44px, 7vw, 56px);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  color: #0f2145;
+
+  &:hover:not(.disabled) {
+    background-color: #f5f5f5;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-50%) scale(1.05);
+  }
+
+  &:active:not(.disabled) {
+    transform: translateY(-50%) scale(0.95);
+  }
+
+  &.disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    background-color: #f5f5f5;
+  }
+
+  &:focus {
+    outline: 2px solid #3e31fa;
+    outline-offset: 2px;
+  }
+
+  svg {
+    font-size: clamp(18px, 3vw, 24px);
+  }
+}
+
+.carouselButtonLeft {
+  left: clamp(4px, 2vw, 42px);
+}
+
+.carouselButtonRight {
+  right: clamp(4px, 2vw, 42px);
+}
+
+.carouselScroll {
+  display: flex;
+  gap: clamp(16px, 2vw, 24px);
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 0px clamp(20px, 5vw, 100px);
+  width: 100%;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.matchCard {
+  flex: 0 0 clamp(280px, 40vw, 350px);
+  display: flex;
+  flex-direction: column;
+}
+
+.matchCardHeader {
+  position: relative;
+  background-color: #0f2145;
+  padding: clamp(16px, 2vw, 20px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-height: clamp(160px, 25vw, 200px);
+  margin-bottom: 20px;
+  border-radius: 15px 15px 0 0;
+}
+
+.teamBox {
+  width: clamp(80px, 12vw, 100px);
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+
+  img {
+    width: clamp(48px, 7vw, 56px);
+    height: clamp(48px, 7vw, 56px);
+    object-fit: contain;
+  }
+
+  p {
+    font-size: clamp(12px, 1.5vw, 14px);
+    text-align: center;
+    margin: 0;
+  }
+}
+
+.centerLogo {
+  width: clamp(40px, 6vw, 50px);
+  flex-shrink: 0;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.matchCardBody {
+  z-index: 1;
+  background-color: #fff;
+  position: relative;
+  padding: clamp(12px, 2vw, 16px) clamp(16px, 3vw, 24px);
+  border-radius: 15px;
+  margin-top: -40px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  flex-grow: 1;
+
+  h3 {
+    font-size: clamp(18px, 2.5vw, 20px);
+    color: #0f2145;
+    margin-bottom: 8px;
+    margin-top: 0;
+  }
+
+  h4 {
+    font-size: clamp(14px, 2vw, 16px);
+    margin: 0;
+    color: #0f2145;
+  }
+}
+
+.footballTeam {
+  font-size: 12px;
+  color: #43526e;
+  margin-bottom: 12px;
+}
+
+.matchInfo {
+  margin: clamp(24px, 4vw, 32px) 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: clamp(14px, 2vw, 16px);
+  color: #43526e;
+
+  svg {
+    font-size: 20px;
+    flex-shrink: 0;
+    font-weight: bold;
+  }
+}
+
+.moreButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #3e31fa;
+  font-size: 14px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px 12px;
+  margin-left: -12px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: rgba(62, 49, 250, 0.05);
+  }
+
+  &:focus {
+    outline: 2px solid #3e31fa;
+    outline-offset: 2px;
+  }
+
+  svg {
+    font-size: 18px;
+  }
+}
+
+// Empty State
+.emptyState {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: #5e6a8320;
+  border-radius: 20px;
+  padding: clamp(40px, 8vw, 80px);
+  margin: 0 auto;
+
+  img {
+    max-width: 165px;
+    width: 100%;
+  }
+}
+
+.emptyTitle {
+  font-size: clamp(18px, 3vw, 24px);
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+}
+
+.emptySubtitle {
+  font-size: clamp(14px, 2vw, 16px);
+  color: #5e6a83;
+  text-align: center;
+}
+
+// Responsive
+@media (max-width: 768px) {
+  .filterHeader {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .monthsContainer {
+    min-width: 100%;
+  }
+}
+
+/* ================= Responsive additions ================= */
+
+/* Mobile – 550px */
+@media (max-width: 550px) {
+  .filterHeader {
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .monthsContainer {
+    padding: 6px;
+    border-radius: 14px;
+  }
+
+  .monthItem {
+    min-width: 42px;
+    padding: 6px 2px;
+    font-size: 12px;
+  }
+
+  .currentDateButton {
+    padding: 6px 16px;
+    font-size: 12px;
+  }
+
+  .carouselScroll {
+    padding: 0 16px;
+    gap: 16px;
+  }
+
+  .matchCard {
+    flex: 0 0 260px;
+  }
+
+  .matchCardHeader {
+    min-height: 150px;
+    padding: 14px;
+
+    .teamBox {
+      img {
+        width: 44px;
+        height: 44px;
+      }
+    }
+  }
+
+  .matchCardBody {
+    padding: 12px 14px;
+
+    .infoItem {
+      svg {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .moreButton {
+    padding: 6px 8px;
+    font-size: 12px;
+  }
+}
+
+/* Tablets – 768px */
+@media (max-width: 768px) {
+  .matchCard {
+    flex: 0 0 300px;
+  }
+
+  .carouselScroll {
+    padding: 0 20px;
+  }
+
+  .matchCardHeader {
+    min-height: 170px;
+  }
+}
+
+/* Very small screens – 380px */
+@media (max-width: 380px) {
+  .monthItem {
+    min-width: 36px;
+    font-size: 11px;
+  }
+
+  .matchCard {
+    flex: 0 0 230px;
+  }
+
+  .matchCardHeader {
+    min-height: 135px;
+
+    .teamBox {
+      img {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+
+  .matchCardBody {
+    padding: 10px 12px;
+  }
+}

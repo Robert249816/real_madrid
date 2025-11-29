@@ -1,0 +1,134 @@
+.container {
+  padding: 20px 100px;
+  @media screen and (max-width: 840px) {
+    padding: 20px;
+  }
+  .title {
+    padding: 32px 0;
+    color: #3e31fa;
+    font-size: 40px;
+    @media screen and (max-width: 840px) {
+      font-size: 32px;
+      padding: 20px;
+    }
+  }
+  .block {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    @media screen and (max-width: 840px) {
+      flex-direction: column;
+    }
+    .leftBlock {
+      width: 70%;
+      max-height: 500px;
+      @media screen and (max-width: 840px) {
+        display: none;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+      }
+    }
+    .rightBlock {
+      .rightBlock_title {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding-bottom: 40px;
+        @media screen and (max-width: 840px) {
+          width: 100%;
+        }
+        a {
+          color: #3e31fa;
+          text-decoration: none;
+          @media screen and (max-width: 1286px) {
+            display: none;
+          }
+        }
+        .footballBasket {
+          background-color: #8c95ae46;
+          gap: 20px;
+          display: flex;
+          font-size: 13px;
+          border-radius: 20px;
+          @media screen and (max-width: 840px) {
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+          }
+          .football {
+            background-color: #3e31fa;
+            padding: 10px 40px;
+            border-radius: 20px;
+            color: white;
+            @media screen and (max-width: 840px) {
+              width: 50%;
+              display: flex;
+              justify-content: center;
+            }
+          }
+          .basket {
+            padding: 10px 30px 10px 0;
+            border-radius: 20px;
+            color: #505562;
+            @media screen and (max-width: 840px) {
+              width: 50%;
+              display: flex;
+              justify-content: center;
+            }
+          }
+        }
+      }
+      .trophies {
+        display: flex;
+        gap: 30px;
+        @media screen and (max-width: 840px) {
+          gap: 60px;
+        }
+        .trophiesleft {
+          display: flex;
+
+          flex-direction: column;
+          gap: 20px;
+          .cup {
+            div {
+              display: flex;
+              gap: 5px;
+              font-size: 30px;
+              div {
+                color: #3e31fa;
+              }
+            }
+            .sup_text {
+              padding-top: 5px;
+              font-size: 12px;
+              color: #505562;
+            }
+          }
+        }
+        .trophiesright {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          .cup {
+            div {
+              display: flex;
+              gap: 5px;
+              font-size: 30px;
+              div {
+                color: #3e31fa;
+              }
+            }
+            .sup_text {
+              padding-top: 5px;
+              font-size: 12px;
+              color: #505562;
+            }
+          }
+        }
+      }
+    }
+  }
+}

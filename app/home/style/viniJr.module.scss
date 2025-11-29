@@ -1,0 +1,42 @@
+.container {
+  margin: 20px 0;
+  width: 100%;
+  background-color: #e1e5ea;
+  padding: 40px;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    padding: 30px 20px;
+    margin: 15px 0;
+  }
+
+  @media (max-width: 480px) {
+    padding: 20px 15px;
+    margin: 10px 0;
+  }
+
+  @media (max-width: 360px) {
+    padding: 15px 10px;
+  }
+
+  div {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+
+      @media (max-width: 480px) {
+        width: 100%;
+      }
+    }
+  }
+}

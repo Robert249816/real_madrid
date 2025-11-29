@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-top: 1px solid #8c95ae80;
+  border-bottom: 1px solid #8c95ae5e;
+  padding: 20px;
+  .header {
+    text-align: center;
+    padding-bottom: 20px;
+    span {
+      color: #8c95ae;
+      font-size: 14px;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+  .installApp {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    @media screen and (max-width: 770px) {
+      flex-direction: column;
+    }
+    img {
+      width: 216px;
+      height: 64px;
+    }
+    .centerImg {
+      width: 216px;
+      height: 72px;
+    }
+  }
+}

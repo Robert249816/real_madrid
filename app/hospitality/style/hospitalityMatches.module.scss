@@ -1,0 +1,140 @@
+.block {
+  background: linear-gradient(to right, #3476b6 0%, #699ac9 100%);
+  padding: 40px 10px 35px;
+  .container_title {
+    font-size: 20px;
+    color: #ffff;
+    border-bottom: 4px solid white;
+    font-weight: bold;
+    max-width: 500px;
+    border-radius: 3px;
+    padding-bottom: 5px;
+  }
+  .container_matchesCalendar {
+    display: flex;
+    gap: 20px;
+    color: #ffff;
+    font-size: 18px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    .matches {
+      padding-top: 5 px;
+      border-bottom: 2px solid white;
+    }
+    .calendar {
+      display: flex;
+      gap: 10px;
+
+      button {
+        padding: 8px 16px;
+        border: 1px solid white;
+        border-radius: 6px;
+        background: transparent;
+        color: white;
+        font-size: 14px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        &.activeMonth {
+          background-color: white;
+          color: #016ace;
+          font-weight: bold;
+          border: 1px solid #016ace;
+        }
+      }
+    }
+  }
+  .matchdayBlock {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    .matchdays {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      justify-content: space-between;
+      background-color: white;
+      border-radius: 10px;
+      padding: 10px 30px;
+      width: 100%;
+      .matchday_leftBlock {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+
+        .matchadyStadium {
+          padding: 0 10px;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          p {
+            color: #43526e;
+          }
+          border-right: 1px solid #43526e;
+        }
+        .uhrData {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
+      }
+      .matchday_centerBlock {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        p {
+          color: #000000;
+        }
+        img {
+          width: 60px;
+          height: 60px;
+        }
+        div {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          p {
+            color: #43526e;
+            font-size: 14px;
+          }
+        }
+      }
+      .matchday_rightBlock {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+        p {
+          color: #43526e;
+        }
+        button {
+          color: white;
+          padding: 15px 40px;
+          border-radius: 10px;
+          font-size: 14px;
+          background-color: #016ace;
+          border: none;
+          cursor: pointer;
+        }
+        div {
+          font-size: 24px;
+          color: #43526e;
+        }
+      }
+    }
+    .showMore {
+      margin-top: 20px;
+      padding: 10px 20px;
+      color: white;
+      border: 1px solid white;
+      cursor: pointer;
+    }
+  }
+}

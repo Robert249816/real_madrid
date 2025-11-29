@@ -1,0 +1,13 @@
+.container {
+  margin: 20px 0;
+  width: 100%;
+  background-color: #e1e5ea;
+  padding: 60px;
+  justify-content: center;
+  align-items: center;
+  div {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+  }
+}
